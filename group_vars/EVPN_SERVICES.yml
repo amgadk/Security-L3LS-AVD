@@ -21,7 +21,7 @@ tenants:
           - id: 401
             name: SALES_NW
             enabled: true
-            ip_address_virtual: 172.16.11.1/24
+            ip_address_virtual: 172.16.41.1/24
       - name: VRF_S
         vrf_vni: 8888
         svis:
