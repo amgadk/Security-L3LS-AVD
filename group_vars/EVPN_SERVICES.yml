@@ -5,6 +5,7 @@ tenants:
     vrfs:
       - name: VRF_C
         vrf_vni: 7777
+        mlag_ibgp_peering_vlan: 3777
         svis:
           - id: 101
             name: STAFF_NW
@@ -24,6 +25,7 @@ tenants:
             ip_address_virtual: 172.16.41.1/24
       - name: VRF_S
         vrf_vni: 8888
+        mlag_ibgp_peering_vlan: 3888
         svis:
           - id: 20
             name: Internal
