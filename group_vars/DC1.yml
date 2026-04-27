@@ -16,13 +16,13 @@ spine:
 # Leaf switches. Most leafs will be l3leaf, not l2leaf.
 l3leaf:
   defaults:
-    bgp_as: 65100-65199 # Gives a range which will be auto-assigned
+    bgp_as: 65100-65250 # Gives a range which will be auto-assigned
     platform: vEOS-lab
     loopback_ipv4_pool: 10.255.0.0/24 # This is loopback0 (underlay)
     vtep_loopback_ipv4_pool: 10.255.1.0/24 # This is loopback1 (VTEP)
     uplink_interfaces: [Ethernet1, Ethernet2] # Leaf uplinks
     uplink_switches: [dc1-spine1, dc1-spine2] # Where the leaf uplinks go
-    uplink_ipv4_pool: 10.255.255.0/24 # For the p2p interfaces to chopped up into /31s
+    uplink_ipv4_pool: 10.255.200.0/22 # For the p2p interfaces to chopped up into /31s
     mlag_interfaces: [Ethernet5, Ethernet6] # MLAG peer link
     mlag_peer_ipv4_pool: 10.255.252.0/24 # MLAG peer IPs
     mlag_peer_l3_ipv4_pool: 10.255.251.0/24 # iBGP peering between MLAG peers
@@ -65,7 +65,7 @@ l3leaf:
           mgmt_ip: 192.168.0.106/24
           uplink_switch_interfaces: [Ethernet6, Ethernet6]
     - group: borderleafs
-      bgp_as: 65150 # Overriden automatic allocation for BorderLeafs
+      bgp_as: 65300 # Overriden automatic allocation for BorderLeafs
       nodes:
         - name: dc1-borderleaf1
           id: 109
