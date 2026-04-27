@@ -1,0 +1,73 @@
+CVP_CONFIGLETS:
+
+
+
+CONTAINERS_DEFAULT:
+  Staging:
+      parentContainerName: Tenant
+ 
+CVP_DEVICES_DEFAULT:
+  - fqdn: 'dc1-spine1'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc1-spine1_management'
+  - fqdn: 'dc1-spine2'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc1-spine2_management'
+  - fqdn: 'dc1-leaf1'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc1-leaf1_management'
+  - fqdn: 'dc1-leaf2'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc1-leaf2_management'
+  - fqdn: 'dc1-leaf3'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc1-leaf3_management'
+  - fqdn: 'dc1-leaf4'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc1-leaf4_management'
+  - fqdn: 'dc1-borderleaf1'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc1-borderleaf1_management'
+  - fqdn: 'dc1-borderleaf2'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc1-borderleaf2_management'
+  - fqdn: 'dc2-spine1'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc2-spine1_management'
+  - fqdn: 'dc2-spine2'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc2-spine2_management'
+  - fqdn: 'dc2-leaf1'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc2-leaf1_management'
+  - fqdn: 'dc2-leaf2'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc2-leaf2_management'
+  - fqdn: 'dc2-leaf3'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc2-leaf3_management'
+  - fqdn: 'dc2-leaf4'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc2-leaf4_management'
+  - fqdn: 'dc2-borderleaf1'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc2-borderleaf1_management'
+  - fqdn: 'dc2-borderleaf2'
+    parentContainerName: 'Staging'
+    configlets:
+      - 'dc2-borderleaf2_management'

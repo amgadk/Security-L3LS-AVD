@@ -1,0 +1,60 @@
+---
+servers:
+  - name: host1
+    adapters:
+      - endpoint_ports: [ Ethernet1, Ethernet2 ]
+        switch_ports: [ Ethernet7, Ethernet7 ]
+        switches: [ dc1-leaf1, dc1-leaf2 ]
+        vlans: 10
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel host1
+          mode: active
+  - name: host2
+    adapters:
+      - endpoint_ports: [ Ethernet1, Ethernet2 ]
+        switch_ports: [ Ethernet9, Ethernet9 ]
+        switches: [ dc1-leaf1, dc1-leaf2 ]
+        vlans: 10
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel host2
+          mode: active
+
+  - name: host3
+    adapters:
+      - endpoint_ports: [ Ethernet1, Ethernet2 ]
+        switch_ports: [ Ethernet7, Ethernet7 ]
+        switches: [ dc1-leaf3, dc1-leaf4 ]
+        vlans: 10
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel host3
+          mode: active
+
+  - name: host4
+    adapters:
+      - endpoint_ports: [ Ethernet1, Ethernet2 ]
+        switch_ports: [ Ethernet9, Ethernet9 ]
+        switches: [ dc1-leaf3, dc1-leaf4 ]
+        vlans: 10
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel host4
+          mode: active
+
+  - name: host5
+    adapters:
+      - endpoint_ports: [ Ethernet1, Ethernet2 ]
+        switch_ports: [ Ethernet9, Ethernet9 ]
+        switches: [ dc1-leaf5, dc1-leaf6 ]
+        vlans: 10
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel host5
+          mode: active
