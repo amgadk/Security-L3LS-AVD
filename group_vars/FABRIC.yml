@@ -65,20 +65,5 @@ l3_edge:
   # Define a new IP pool that will be used to assign IP addresses to L3 Edge interfaces.
   p2p_links_ip_pools:
     - name: DCI_IP_pool
-      ipv4_pool: 172.100.100.0/22
-  # Define a new link profile which will match the IP pool, the used ASNs and include the defined interface into underlay routing
-  p2p_links_profiles:
-    - name: DCI_profile
-      ip_pool: DCI_IP_pool
-      as: [65110, 65210]
-      include_in_underlay_protocol: true
-  # Define each P2P L3 link and link the nodes, the interfaces and the profile used.
-  p2p_links:
-    - id: 101
-      nodes: [dc1-borderleaf1, dc2-borderleaf1]
-      interfaces: [Ethernet20, Ethernet20]
-      profile: DCI_profile
-    - id: 202
-      nodes: [dc1-borderleaf2, dc2-borderleaf2]
-      interfaces: [Ethernet20, Ethernet20]
-      profile: DCI_profile
+      ipv4_pool: 10.255.255.0/24
+
