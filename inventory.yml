@@ -1,5 +1,5 @@
 ---
-# Automation_demo-16102503
+# Security Lab L3LS
 all:
   children:
     CVP_cluster:
@@ -63,38 +63,9 @@ all:
                   ansible_host: 10.18.171.191
                 dc1-borderleaf2:
                   ansible_host: 10.18.170.133
-        DC2:
-          children:
-            DC2_SPINES:
-              vars:
-                type: spine
-              hosts:
-                dc2-spine1:
-                  ansible_host: 10.18.157.3
-                dc2-spine2:
-                  ansible_host: 10.18.133.56
-            DC2_LEAVES:
-              vars: 
-                type: l3leaf
-              hosts:
-                dc2-leaf1:
-                  ansible_host: 10.18.130.228
-                dc2-leaf2:
-                  ansible_host: 10.18.133.59
-                dc2-leaf3:
-                  ansible_host: 10.18.133.58
-                dc2-leaf4:
-                  ansible_host: 10.18.156.136
-                dc2-borderleaf1:
-                  ansible_host: 10.18.171.203
-                dc2-borderleaf2:
-                  ansible_host: 10.18.171.197
-
     EVPN_SERVICES:
       children:
         DC1_LEAVES:
-        DC2_LEAVES:
     ENDPOINT_CONNECT:
       children:
         DC1_LEAVES:
-        DC2_LEAVES:
