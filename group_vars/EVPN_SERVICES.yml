@@ -3,15 +3,27 @@ tenants:
   - name: ACME
     mac_vrf_vni_base: 10000
     vrfs:
-      - name: VRF_A
-        vrf_vni: 10
+      - name: VRF_C
+        vrf_vni: 7777
         svis:
-          - id: 10
-            name: DMZ
+          - id: 101
+            name: STAFF_NW
             enabled: true
-            ip_address_virtual: 10.1.10.1/24
-      - name: VRF_B
-        vrf_vni: 20
+            ip_address_virtual: 172.16.11.1/24
+          - id: 201
+            name: MEDIA_NW
+            enabled: true
+            ip_address_virtual: 172.16.21.1/24
+          - id: 301
+            name: IOT_NW
+            enabled: true
+            ip_address_virtual: 172.16.31.1/24
+          - id: 401
+            name: SALES_NW
+            enabled: true
+            ip_address_virtual: 172.16.11.1/24
+      - name: VRF_S
+        vrf_vni: 8888
         svis:
           - id: 20
             name: Internal
