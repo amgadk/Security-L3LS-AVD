@@ -1,11 +1,15 @@
 ---
 LAB:
   hosts:
-    s1-core1:
-    s1-core2:
-    s1-host1:
-    s1-host2:
-    s2-core1:
-    s2-core2:
-    s2-host1:
-    s2-host2:
+    Staff-H1:
+      ansible_host: 10.18.137.126
+    Media-H2:
+    IOT-H3:
+    Sales-H4:
+    Staff-H5:
+    Sales-H6:
+    Media-H8:
+    Staff-H9:
+    IOT-H10:
+    Sales-H11:
+    IOT-H12:
