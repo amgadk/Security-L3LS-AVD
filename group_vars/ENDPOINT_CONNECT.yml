@@ -1,60 +1,137 @@
 ---
 servers:
-  - name: host1
+  - name: Staff-H1
     adapters:
       - endpoint_ports: [ Ethernet1, Ethernet2 ]
         switch_ports: [ Ethernet7, Ethernet7 ]
         switches: [ dc1-leaf1, dc1-leaf2 ]
-        vlans: 10
+        vlans: 101
         mode: access
         spanning_tree_portfast: edge
         port_channel:
-          description: PortChannel host1
+          description: PortChannel Staff-H1
           mode: active
-  - name: host2
+  - name: Media-H2
     adapters:
       - endpoint_ports: [ Ethernet1, Ethernet2 ]
         switch_ports: [ Ethernet9, Ethernet9 ]
         switches: [ dc1-leaf1, dc1-leaf2 ]
-        vlans: 10
+        vlans: 201
         mode: access
         spanning_tree_portfast: edge
         port_channel:
-          description: PortChannel host2
+          description: PortChannel Media-H2
           mode: active
 
-  - name: host3
+  - name: IOT-H3
     adapters:
       - endpoint_ports: [ Ethernet1, Ethernet2 ]
         switch_ports: [ Ethernet7, Ethernet7 ]
         switches: [ dc1-leaf3, dc1-leaf4 ]
-        vlans: 10
+        vlans: 301
         mode: access
         spanning_tree_portfast: edge
         port_channel:
-          description: PortChannel host3
+          description: PortChannel IOT-H3
           mode: active
 
-  - name: host4
+  - name: Sales-H4
     adapters:
       - endpoint_ports: [ Ethernet1, Ethernet2 ]
         switch_ports: [ Ethernet9, Ethernet9 ]
         switches: [ dc1-leaf3, dc1-leaf4 ]
-        vlans: 10
+        vlans: 401
         mode: access
         spanning_tree_portfast: edge
         port_channel:
-          description: PortChannel host4
+          description: PortChannel Sales-H4
           mode: active
 
-  - name: host5
+  - name: Staff-H5
+    adapters:
+      - endpoint_ports: [ Ethernet1, Ethernet2 ]
+        switch_ports: [ Ethernet7, Ethernet7 ]
+        switches: [ dc1-leaf5, dc1-leaf6 ]
+        vlans: 101
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel Staff-H5
+          mode: active
+  - name: Sales-H6
     adapters:
       - endpoint_ports: [ Ethernet1, Ethernet2 ]
         switch_ports: [ Ethernet9, Ethernet9 ]
         switches: [ dc1-leaf5, dc1-leaf6 ]
-        vlans: 10
+        vlans: 401
         mode: access
         spanning_tree_portfast: edge
         port_channel:
-          description: PortChannel host5
+          description: PortChannel Sales-H6
+          mode: active
+  - name: Media-H7
+    adapters:
+      - endpoint_ports: [ Ethernet1 ]
+        switch_ports: [ Ethernet10 ]
+        switches: [ dc1-leaf6 ]
+        vlans: 201
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel Media-H7
+          mode: active
+  - name: Media-H8
+    adapters:
+      - endpoint_ports: [ Ethernet1 ]
+        switch_ports: [ Ethernet8 ]
+        switches: [ dc1-leaf1 ]
+        vlans: 201
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel Media-H8
+          mode: active
+  - name: Staff-H9
+    adapters:
+      - endpoint_ports: [ Ethernet1 ]
+        switch_ports: [ Ethernet10 ]
+        switches: [ dc1-leaf2 ]
+        vlans: 101
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel Staff-H9
+          mode: active
+  - name: IOT-H10
+    adapters:
+      - endpoint_ports: [ Ethernet1 ]
+        switch_ports: [ Ethernet8 ]
+        switches: [ dc1-leaf3 ]
+        vlans: 301
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel IOT-H10
+          mode: active
+  - name: Sales-H11
+    adapters:
+      - endpoint_ports: [ Ethernet1 ]
+        switch_ports: [ Ethernet10 ]
+        switches: [ dc1-leaf4 ]
+        vlans: 401
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel Sales-H11
+          mode: active
+  - name: IOT-H12
+    adapters:
+      - endpoint_ports: [ Ethernet1 ]
+        switch_ports: [ Ethernet8 ]
+        switches: [ dc1-leaf5 ]
+        vlans: 301
+        mode: access
+        spanning_tree_portfast: edge
+        port_channel:
+          description: PortChannel IOT-H12
           mode: active
