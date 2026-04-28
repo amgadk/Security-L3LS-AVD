@@ -1,29 +1,37 @@
 ---
 tenants:
   - name: ACME
-    mac_vrf_vni_base: 10000
+    mac_vrf_vni_base: 2000
     vrfs:
-      - name: VRF_C
+      - name: VRF-C
         vrf_vni: 7777
         mlag_ibgp_peering_vlan: 3777
         svis:
           - id: 101
             name: STAFF_NW
             enabled: true
-            ip_address_virtual: 172.16.11.1/24
+            ip_address: 172.16.11.1/24
+            ip_virtual_router_addresses: 
+              - 172.16.11.254
           - id: 201
             name: MEDIA_NW
             enabled: true
-            ip_address_virtual: 172.16.21.1/24
+            ip_address: 172.16.21.1/24
+            ip_virtual_router_addresses: 
+              - 172.16.21.254
           - id: 301
             name: IOT_NW
             enabled: true
-            ip_address_virtual: 172.16.31.1/24
+            ip_address: 172.16.31.1/24
+            ip_virtual_router_addresses: 
+              - 172.16.31.254
           - id: 401
             name: SALES_NW
             enabled: true
-            ip_address_virtual: 172.16.41.1/24
-      - name: VRF_S
+            ip_address: 172.16.41.1/24
+            ip_virtual_router_addresses: 
+              - 172.16.41.254
+      - name: VRF-S
         vrf_vni: 8888
         mlag_ibgp_peering_vlan: 3888
         svis:
