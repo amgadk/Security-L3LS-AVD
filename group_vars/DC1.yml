@@ -72,6 +72,7 @@ l3leaf:
           mgmt_ip: 192.168.0.107/24
           uplink_switch_interfaces: [Ethernet7, Ethernet7]
         - name: dc1-borderleaf2
-          id: 18
+          id: 110
           mgmt_ip: 192.168.0.108/24
           uplink_switch_interfaces: [Ethernet8, Ethernet8]
+
