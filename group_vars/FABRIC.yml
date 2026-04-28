@@ -23,7 +23,7 @@ ansible_httpapi_validate_certs: false
 
 # Enable vlan aware bundles
 evpn_vlan_aware_bundles: false
-mgmt_gateway: 192.168.0.5
+#mgmt_gateway: 192.168.0.5
 mgmt_interface_vrf: default
 
 
