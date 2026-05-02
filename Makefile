@@ -14,13 +14,9 @@ ping-site-1: ## Ping Nodes
 build: ## Build Configs
 	ansible-playbook playbooks/build_fabric.yml -i inventory.yml
 
-.PHONY: deploy-site-1
-deploy-site-1: ## Deploy Configs via eAPI
-	ansible-playbook playbooks/deploy.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
-
-.PHONY: cvp-site-1
-cvp-site-1: ## Deploy Configs via CloudVision Static Configuration Studio
-	ansible-playbook playbooks/cvp.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
+.PHONY: deploy
+deploy: ## Deploy Configs via CloudVision
+	ansible-playbook playbooks/deploy_cv.yml -i inventory.yml
 
 .PHONY: validate-site-1
 validate-site-1: ## Validate network state
