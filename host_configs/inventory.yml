@@ -2,14 +2,24 @@
 LAB:
   hosts:
     Staff-H1:
-      ansible_host: 10.18.137.126
+      ansible_host: 192.168.0.209
     Media-H2:
+      ansible_host: 192.168.0.210
     IOT-H3:
+      ansible_host: 192.168.0.213
     Sales-H4:
+      ansible_host: 192.168.0.214
     Staff-H5:
+      ansible_host: 192.168.0.215
     Sales-H6:
+      ansible_host: 192.168.0.216
     Media-H8:
+      ansible_host: 192.168.0.218
     Staff-H9:
+      ansible_host: 192.168.0.219
     IOT-H10:
+      ansible_host: 192.168.0.220
     Sales-H11:
+      ansible_host: 192.168.0.221
     IOT-H12:
+      ansible_host: 192.168.0.222
