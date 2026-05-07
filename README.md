@@ -1,13 +1,8 @@
-# L3LS DC Automation
+# L3LS EVPN Security Fabric
 
-This guide will go through the steps to fully configure a DC fabric from scratch using Infrastructure-as-Code
- - Ansible
- - Arista (AVD) 
-
-### L3LS Topology
 
 <p align="center">
-  <img src='Images/Dual-DC_Topology_Physical.png' alt='Arista DC Fabric'/>
+  <img src='Images/Security-topology.png' alt='Arista DC Fabric'/>
 </p>
 
 # FABRIC
