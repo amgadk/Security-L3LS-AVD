@@ -63,6 +63,18 @@ all:
                   ansible_host: 192.168.0.107
                 dc1-borderleaf2:
                   ansible_host: 192.168.0.108
+            # DC1_ZTX:
+            #   vars: 
+            #     type: service_leaf
+            #   hosts:
+            #     ZTX-Monitor1:
+            #       ansible_host: 192.168.0.121
+    EVPN_SERVICES:
+      children:
+        DC1_LEAVES:
+    ENDPOINT_CONNECT:
+      children:
+        DC1_LEAVES:
     EVPN_SERVICES:
       children:
         DC1_LEAVES:
