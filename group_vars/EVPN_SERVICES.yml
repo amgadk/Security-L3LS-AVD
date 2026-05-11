@@ -31,6 +31,13 @@ tenants:
             ip_address: 172.16.41.1/24
             ip_virtual_router_addresses: 
               - 172.16.41.254
+        l3_interfaces:
+          # L3 interfaces
+          - interfaces: [ Ethernet12 ]
+            nodes: [ dc1-borderleaf1 ]
+            description: Firewall-1-LAN3
+            enabled: true
+            ip_addresses: [ 10.255.255.201/31 ]
       - name: VRF-S
         vrf_vni: 8888
         mlag_ibgp_peering_vlan: 3888
@@ -46,16 +53,10 @@ tenants:
             description: Firewall-1-LAN2
             enabled: true
             ip_addresses: [ 10.255.255.199/31 ]
-          - interfaces: [ Ethernet12 ]
-            nodes: [ dc1-borderleaf1 ]
-            description: Firewall-1-LAN3
-            enabled: true
-            ip_addresses: [ 10.255.255.201/31 ]
         static_routes:
           - nodes:
               - dc1-borderleaf1
             prefix: 0.0.0.0/0
-            next_hop: 10.255.255.198
+            next_hop: 10.255.255.148
             # description.
             name: "to_FW-1"
-   
