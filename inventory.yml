@@ -75,9 +75,3 @@ all:
     ENDPOINT_CONNECT:
       children:
         DC1_LEAVES:
-    EVPN_SERVICES:
-      children:
-        DC1_LEAVES:
-    ENDPOINT_CONNECT:
-      children:
-        DC1_LEAVES:
